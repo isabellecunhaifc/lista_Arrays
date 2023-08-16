@@ -9,12 +9,36 @@
     //Caso não acerte, o programa deverá retornar:
     //NÃO FOI DESSA VEZ... TENTE NOVAMENTE!
 
-    //ENTRADA
-
-
+    //ENTRADAin
+    const cores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
+    const corInformada = prompt("Insira uma cor (v - verde, b - branco, am - amarelo, a - azul, p - preto, m - marrom, c - cinza)").trim().toUpperCase();
+    const numero =  Math.floor(Math.random() * 7);
     //PROCESSAMENTO
+    if (corInformada == "c" && num == 6) {
+        alert(`PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${corInformada}!`);
+    }
+    else if (corInformada == "m" && num == 5) {
+        alert(`PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${corInformada}!`);
+    }
+    else if (corInformada == "p" && num == 4) {
+        alert(`PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${corInformada}!`);
+    }
+    else if (corInformada == "b" && num == 3) {
+        alert(`PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${corInformada}!`);
+    }
+    else if (corInformada == "v" && num == 2) {
+        alert(`PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${corInformada}!`);
+    }
+    else if (corInformada == "am" && num == 1) {
+        alert(`PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${corInformada}!`);
+    }
+    else if (corInformada == "a" && num == 0) {
+        alert(`PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${corInformada}!`);
+    }
 
-
+    else {
+        alert(`NÃO FOI DESSA VEZ... TENTE NOVAMENTE!`);
+    }
     //SAÍDA
 
 

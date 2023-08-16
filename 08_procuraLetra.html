@@ -1,16 +1,21 @@
 <script>
-    //Problema: Procurar letra
+     //Problema: Procurar letra
     //Peça para o usuário digitar UMA palavra.
     //Peça para o usuário digitar a letra que deseja encontrar na palavra que acabou de digitar.
 
     //Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
 
     //ENTRADA
-
-
+    const palavra = prompt(`Insira uma palavra sem letras repetidas.`.trim());
+    const letra = prompt(`Insira uma letra da palavra que você acabou de digitar.`.trim());
+    let posição = palavra.indexOf(letra);
     //PROCESSAMENTO
-
+    if (posição !== -1) {
+        alert(`A letra ${letra} está na posição ${posição} da palavra ${palavra}.`)
+    }
 
     //SAÍDA
-
+    else {
+        alert(`A letra ${letra} não está na palavra ${palavra}.`)
+    }
 </script>
