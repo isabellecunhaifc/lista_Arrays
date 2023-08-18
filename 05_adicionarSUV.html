@@ -7,17 +7,12 @@
 
     //ENTRADA
     let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
-     const adicionar = prompt(`Deseja adicionar algum carro a lista? (S - sim, N - para não.)`).trim().toUpperCase();
-    //PROCESSAMENTO
-    if(adicionar == "S"){
-    let carroadicionado = prompt(`Qual carro deseja adicionar?`);
-    carrosSUV.push(carroadicionado);
-    alert(`A lista está assim ${carrosSUV.join(", ")}.`);
-    }
-    else {
-        alert(`Esta é a lista ${carrosSUV.join(", ")}.`);
-    }
+    const carro = prompt(`informe qual carro deseja adicionar a lista? ["Tiggo", "Sportage", "Tucson", "EcoSport"]`);
+    carrosSUV.push(carro)
+    document.write(`A lista antiga: ${carrosSUV.slice(-1)} <br>A nova lista: ${carrosSUV}`);
 
+    //PROCESSAMENTO
+    
     //SAÍDA
 
 </script>

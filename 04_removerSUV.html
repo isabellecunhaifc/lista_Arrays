@@ -6,29 +6,14 @@
     //Apresente a lista antiga de SUVs e a nova lista, após a remoção do veículo solicitado.
 
     //ENTRADA  
-    const remover = prompt(`Quais desses carros você deseja remover? (Tiggálio, Sportage, Tucson e EcoSport.")`).trim().toLowerCase();
-    let carrosSUV = ["Tiggálio", "Sportage", "Tucson", "EcoSport"];
-    let removido = [];
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    carrosSUV.join(`, `)
+    const carro = Number(prompt(`informe qual carro deseja adicionar na lista.( 1=tiggo, 2=sportage, 3=tucson, 4=ecosport)`)) - 1;
+    carroEscolhido.push(carrosSUV.slice(carro -1 , 1))
+    if ( carro == 1 || carro == 2 || carro == 3 || carro == 4 ){
+        document.write(`lista Antiga: ${carrosSUV} <br> Nova Lista: ${carroEscolhido}`);
+    }
     //PROCESSAMENTO
-    if (remover == "tiggálio") {
-        removido = carrosSUV.shift("Tiggálio");
-        alert(`Este é o carro que foi removido : ${removido}, esta é a lista atual ${carrosSUV}.`)
-    }
-    else if (remover == "sportage") {
-        removido = carrosSUV.splice(1, 1)
-        alert(`Este é o carro que foi removido : ${removido}, esta é a lista atual ${carrosSUV}.`)
-    }
-    else if (remover == "tucson") {
-        removido = carrosSUV.splice(2,1)
-        alert(`Este é o carro que foi removido : ${removido}, esta é a lista atual ${carrosSUV}.`)
-
-    }
-    else if (remover == "ecosport") {
-        removido = carrosSUV.splice(3,1) 
-        alert(`Este é o carro que foi removido : ${removido}, esta é a lista atual ${carrosSUV}.`)
-    }
-    else {
-        alert(`Nome inválido.`)
-    }
+    
     //SAÍDA
 </script>

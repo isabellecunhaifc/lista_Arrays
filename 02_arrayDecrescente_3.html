@@ -3,27 +3,31 @@
     //Peça para um usuário inserir três números. Crie um array com os três números, colocando-os em ordem decrescente. Para ordenar, NÃO use o método reverse();
     //Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
 
-    const n1 = Number(prompt(`Insira o 1° número.`).trim());
-    const n2 = Number(prompt(`Insira o 2° número.`).trim());
-    let arr = []
+    
     //ENTRADA
-
+    const n1 = Number(prompt(`informe um número.`));
+    const n2 = Number(prompt(`informe um outro número.`));
+    const n3 = Number(prompt(`informe um outro número.`));
+    let sequencia = '';
     //PROCESSAMENTO
-    if (n1 > n2) {
-        arr = [n1, n2]
+    if (n1 > n2 && n2 >= n3) {
+        sequencia = [n1, n2, n3]
     }
-    else if (n2 > n1) {
-        arr = [n2, n1]
+    else if ( n2 > n1 && n1 >= n3) {
+        sequencia = [n2, n1, n3]
+    } 
+    else if (n1 > n3 && n3 >= n2) {
+        sequencia = [n1, n3, n2]
     }
-    else {
-        alert(`Os números inseridos ${n1}-${n2} são iguais.`);
+    else if (n3 > n1 && n1 >= n2) {
+        sequencia = [n3, n1, n2]
     }
-
-
-
-
-    //SAÍDA
-    alert(`Os números em ordem decrescente são ${arr.join("-")}.`);
-    //SAÍDA
+    else if ( n3 > n2 && n2 >= n1) {
+        sequencia = [n3, n2, n1]
+    }
+    else if ( n2 > n3 && n3 >= n1) {
+        sequencia = [n2, n3, n1]
+    };
+   document.write(sequencia.join(` - `));
 
 </script>
